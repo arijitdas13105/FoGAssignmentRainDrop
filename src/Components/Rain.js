@@ -11,7 +11,7 @@ const Rain = () => {
     ["#ff0044", "#ff2244", "#ff4466", "#ff6688", "#ff88aa", "#ffaaee"],
     ["#0044ff", "#2266ff", "#4488ff", "#66aaff", "#88ccff", "#aadfff"], 
     ["#44ff00", "#66ff22", "#88ff44", "#aaff66", "#ccff88", "#eeffaa"],
-
+  ]
   useEffect(() => {
     const colorChangeInterval = setInterval(() => {
       setColorSetIndex((prevIndex) => (prevIndex + 1) % colorSets.length);
@@ -19,6 +19,8 @@ const Rain = () => {
 
     return () => clearInterval(colorChangeInterval);
   }, []);
+
+ 
 
   useEffect(() => {
     const interval = setInterval(() => {
